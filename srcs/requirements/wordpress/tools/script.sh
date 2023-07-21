@@ -1,8 +1,21 @@
+chown -R www-data:www-data /var/www/html/wordpress
+
+mkdir -p /run/php
+touch /run/php/php7.3-fpm.sock
+chown -R www-data:www-data /run/php/
+chmod 660 /run/php/php7.3-fpm.sock
+
 cd /var/www/html/wordpress
-#Downloading and extracting Wordpress core files to the current directory
 wp core download --allow-root
-# Creating the wp-config.php file using this command.
+
+
 wp core config --dbname=${MYSQL_DATABASE} --dbuser=${MYSQL_USER} --dbpass=${MYSQL_PASSWORD} --dbhost=mariadb --allow-root
-# Installing wordpress using the given environment variables to avoid showing the wordpress installation page everytime we run the containe
-wp core install --url=${DOMAIN_NAME} --title=DopamInception --admin_user=${WP_USER} --admin_password=${WP_PW} --admin_email=${WP_EMAIL} --a
+
+wp core install --url=${DOMAIN_NAME} --title=DopamInception --admin_user=${WP_ADMIN} --admin_password=${WP_ADMIN_PW} --admin_email=${WP_EMAIL} --allow-root
+
+wp user create ${WP_USER} test@gmail.com --user_pass=${WP_PW} --role=author --allow-root
+
+wp search-replace 'localhost' 'mrafik@42.fr' --allow-root
+wp search-replace 'https://localhost' 'https://mrafik@42.fr' --allow-root
+
 exec $@
