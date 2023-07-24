@@ -66,11 +66,9 @@ volumes :
     driver: local
     driver_opts:
       type: none
-      device: /mnt/c/Users/Amine/OneDrive/Bureau/incep/srcs/requirements/wordpress
       o: bind
   mariadb:
     driver: local
     driver_opts:
       type: none
-      device: /mnt/c/Users/Amine/OneDrive/Bureau/incep/srcs/requirements/mariadb
       o: bind
