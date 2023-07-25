@@ -13,3 +13,4 @@ RUN chmod 777 /etc/nginx/conf.d/nginx.conf
 EXPOSE 443
 
 CMD ["nginx", "-g", "daemon off;"]
+    

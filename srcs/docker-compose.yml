@@ -66,9 +66,11 @@ volumes :
     driver: local
     driver_opts:
       type: none
+      device : /Users/mrafik/Desktop/inception/all
       o: bind
   mariadb:
     driver: local
     driver_opts:
       type: none
+      device : /Users/mrafik/Desktop/inception/all
       o: bind
