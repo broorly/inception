@@ -15,7 +15,7 @@ wp core install --url=${DOMAIN_NAME} --title=DopamInception --admin_user=${WP_AD
 
 wp user create ${WP_USER} test@gmail.com --user_pass=${WP_PW} --role=author --allow-root
 
-wp search-replace 'localhost' 'mrafik@42.fr' --allow-root
-wp search-replace 'https://localhost' 'https://mrafik@42.fr' --allow-root
-
+# wp search-replace 'localhost' 'mrafik@42.fr' --allow-root
+# wp search-replace 'https://localhost' 'https://mrafik@42.fr' --allow-root
+php-fpm7.3 --nodaemonize --fpm-config /etc/php/7.3/fpm/php-fpm.conf
 exec $@
