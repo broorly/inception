@@ -53,7 +53,6 @@ services:
       - .env
     volumes:
       - wordpress:/var/www/html/wordpress
-      - ./srcs/requirements/nginx/tools/nginx.conf:/etc/nginx/conf.d
     restart: always
     init: true
 

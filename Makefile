@@ -8,7 +8,7 @@ DOCKER_COMPOSE_FILE := srcs/docker-compose.yml
 up: ## Start the Docker containers
 	@mkdir -p /mnt/c/Users/Amine/OneDrive/Bureau/incep/all/wordpress
 	@mkdir -p /mnt/c/Users/Amine/OneDrive/Bureau/incep/all/mariadb
-	$(DOCKER_COMPOSE) -f $(DOCKER_COMPOSE_FILE) build 
+	$(DOCKER_COMPOSE) -f $(DOCKER_COMPOSE_FILE) build
 	$(DOCKER_COMPOSE) -f $(DOCKER_COMPOSE_FILE) up -d
 
 down: ## Stop and remove the Docker containers

@@ -17,6 +17,7 @@ COPY load.sh .
 RUN chmod +x load.sh
 
 RUN mkdir -p /run/php
+EXPOSE 9000
 
 ENTRYPOINT [ "./load.sh" ]
 
