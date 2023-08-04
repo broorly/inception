@@ -20,7 +20,7 @@ services:
 
   wordpress:
     container_name: wordpress
-    build: ./requirements/wordpress
+    build: ./requirements/wordpress/
     volumes:
       - wordpress:/var/www/html/wordpress
     env_file:
@@ -35,8 +35,8 @@ services:
       - WORDPRESS_DB_PASSWORD=${WORDPRESS_DB_PASSWORD}
       - WORDPRESS_TABLE_PREFIX=${WORDPRESS_TABLE_PREFIX}
       - DOMAIN_NAME=${DOMAIN_NAME}
-    ports:
-      - 9000:9000
+    # ports:
+    #   - 9000:9000
     restart: always
     init: true
 
@@ -65,11 +65,11 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /mnt/c/Users/Amine/OneDrive/Bureau/incep/all/wordpress
+      device: /Users/mrafik/Desktop/incep/all/wordpress
       o: bind
   mariadb:
     driver: local
     driver_opts:
       type: none
-      device: /mnt/c/Users/Amine/OneDrive/Bureau/incep/all/mariadb
+      device: /Users/mrafik/Desktop/incep/all/mariadb
       o: bind
