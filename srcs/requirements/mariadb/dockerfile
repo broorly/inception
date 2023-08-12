@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y mariadb-server
 ARG MYSQL_DATABASE MYSQL_USER MYSQL_PASSWORD MYSQL_ROOT_PASSWORD
 COPY ./tools/script.sh ./script.sh
 
-COPY ./tools/maria.cnf /etc/mysql/mariadb.conf.d/maria.cnf
+COPY maria.cnf /etc/mysql/mariadb.conf.d/maria.cnf
 
 RUN chmod +x script.sh
 RUN chmod 644 /etc/mysql/mariadb.conf.d/maria.cnf

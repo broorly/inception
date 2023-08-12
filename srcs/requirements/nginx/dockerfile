@@ -6,7 +6,7 @@ COPY ./tools/certificate.crt /etc/ssl/
 
 COPY ./tools/private.key /etc/ssl/
 
-COPY ./tools/nginx.conf /etc/nginx/conf.d/
+COPY ./nginx.conf /etc/nginx/conf.d/
 
 RUN chmod 777 /etc/nginx/conf.d/nginx.conf
 
