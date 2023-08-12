@@ -65,11 +65,11 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /Users/mrafik/Desktop/incep/all/wordpress
+      device: /home/mrafik/data/wordpress
       o: bind
   mariadb:
     driver: local
     driver_opts:
       type: none
-      device: /Users/mrafik/Desktop/incep/all/mariadb
+      device: /home/mrafik/data/mariadb
       o: bind
